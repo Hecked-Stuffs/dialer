@@ -159,13 +159,13 @@ public class CallButtonPresenter
       call = callList.getActiveOrBackgroundCall();
 
     if (!isRecording && isEnabled && call != null) {
-        isRecording = true;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    callRecordClicked(true);
-                }
-            }, 500);
+                isRecording = true;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        callRecordClicked(true);
+                    }
+                }, 500);
     }
       // When connected to voice mail, automatically shows the dialpad.
       // (On previous releases we showed it when in-call shows up, before waiting for
